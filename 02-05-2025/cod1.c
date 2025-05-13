@@ -8,12 +8,12 @@ int main(){
 	
 	char categoria;
 	float salario,salario_atual; 
-		
-	printf("Entre com a categoria de trabalho do funcionário:");
-	scanf("%c",&categoria);
 	
 	printf("Entre com o salário do funcionário:");
 	scanf("%f",&salario);
+
+	printf("Entre com a categoria de trabalho do funcionário:");
+	scanf(" %c",&categoria);
 	
 	switch(categoria){
 	case 'A':
