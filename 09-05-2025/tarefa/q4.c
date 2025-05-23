@@ -19,7 +19,26 @@ Soma:
 */
 
 int main(){
+    int n,soma;
 
+    do{
+        soma=0;
+        printf("Entre com um número: ");
+        scanf("%d",&n);
+
+        for(int i=1;i<n;i++){
+            if(n%i==0)
+                soma+=i;
+            else
+                continue;
+        }
+
+        if(soma==n)
+            printf("O número %d é um número perfeito.\n",n);
+        else
+            printf("O número %d não é um número perfeito.\n",n);
+
+    }while(n!=0);
 
     return 0;
 }
