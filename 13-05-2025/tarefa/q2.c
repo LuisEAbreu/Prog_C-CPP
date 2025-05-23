@@ -13,7 +13,7 @@ int main(){
     printf("Entre com até 10 números positivos.\n");
 
     for(i=0;i<10;i++){
-        printf("Entre com o número %d: \n",i+1);
+        printf("Entre com o número %d: ",i+1);
         scanf("%d",&n);
         if(n<0){
             break;
