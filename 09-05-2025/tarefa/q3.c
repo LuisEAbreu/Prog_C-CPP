@@ -12,11 +12,11 @@ int main(){
     do{
         printf("Entre com uma nota entre 0 e 10: ");
         scanf("%d",&n);
-        if(n>=0){
-            soma=soma+n;
+        if(n>=0 && n<=10){
+            soma+=n;
             contador+=1;
         }
-    }while(n>=0);
+    }while(n!=-1);
 
     if(contador>0){
         media=soma/contador;
