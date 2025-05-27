@@ -1,44 +1,30 @@
 #include <stdio.h>
 
 /*
-Implemente um programa em C que percorre um intervalo [a,b],
-com passo dx = 0.01, e determina o valor máximo e mínimo positivos da função f(x). 
-Use continue para ignorar valores negativos ou nulos da função. A função é f(x)=x2- 4x+3. 
-O intervalo é fornecido como entrada e  deve ser válido, ou seja a,b reais sendo b>a. 
-Solicitar uma nova entrada caso isso não seja atendido.
+Implemente um programa em C que calcule a derivada numerica da função
+f(x)=3x^2+2x-5
+em um ponto x0 informado pelo usuário, utilizando o método da diferença progressiva:
+f'(x0)~(f(x0+h)-f(x0))/h
+O usuário também deverá fornecer o valor de h (passo).
 */
 
+#define FUNCAO 3*x*x+2*x-5
+#define DERIVADA (f(x0+h)-f(x0))/h
+
 int main(){
-    float a,b,fx,x,max,min;
+    float x0,h,fx0,fx0h,flinha;
 
-    printf("Considerando um intervalo [a,b].\n");
+    printf("Entre com o ponto x0: ");
+    scanf("%f",&x0);
+    printf("Entre com o valor do passo (h): ");
+    scanf("%f",&h);
 
-    do{
-        printf("Entre com a: ");
-        scanf("%f",&a);
-        printf("Entre com b: ");
-        scanf("%f",&b);
-        if(b<a){
-            printf("O b fornecido é menor do que o a.\n");
-        }
-    }while(b<a);
+    fx0=3*x0*x0+2*x0-5;
+    fx0h=3*(x0+h)*(x0+h)+2*(x0+h)-5;
 
-    x=a;
-    fx=x*x-4*x+3;
-    min,max=fx;
+    flinha=(fx0h-fx0)/h;
 
-    for(x=a;x<=b;x+=0.01){
-        fx=x*x-4*x+3;
-
-        if(fx<=0)
-            continue;
-        else if(fx<min)
-            min=fx;
-        else if(fx>max)
-            max=fx;
-    }
-    printf("O ponto mínimo de f(x) é %.2f.\n",min);
-    printf("O ponto máximo de f(x) é %.2f.\n",max);
+    printf("A derivada numérica da função f(x) é %.2f.\n",flinha);
     
     return 0;
 }   
