@@ -18,9 +18,8 @@ int main(){
         scanf("%f",&a);
         printf("Entre com b: ");
         scanf("%f",&b);
-        if(b<a){
+        if(b<a)
             printf("O b fornecido é menor do que o a.\n");
-        }
     }while(b<a);
 
     x=a;

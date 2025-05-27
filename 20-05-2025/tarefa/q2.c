@@ -8,9 +8,6 @@ f'(x0)~(f(x0+h)-f(x0))/h
 O usuário também deverá fornecer o valor de h (passo).
 */
 
-#define FUNCAO 3*x*x+2*x-5
-#define DERIVADA (f(x0+h)-f(x0))/h
-
 int main(){
     float x0,h,fx0,fx0h,flinha;
 
