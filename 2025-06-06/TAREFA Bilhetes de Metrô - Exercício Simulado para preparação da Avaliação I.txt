@@ -1,0 +1,99 @@
+Exercício - Máquina de Venda de Bilhetes com Desconto Aleatório e Estatísticas
+
+ 
+
+Uma estação de metrô possui uma máquina de venda automática de bilhetes.
+
+O preço do bilhete depende da zona de destino:
+
+ 
+
+| Zona de destino | Preço por bilhete |
+
+|-----------------|------------------|
+
+| 1               | R$ 4.50          |
+
+| 2               | R$ 6.00          |
+
+| 3               | R$ 7.50          |
+
+ 
+
+A máquina apresenta o seguinte menu:
+
+ 
+
+=== MENU ===
+
+1 - Comprar bilhetes
+
+2 - Exibir total de bilhetes vendidos
+
+3 - Exibir total de dinheiro arrecadado
+
+4 - Exibir numero de clientes premiados e valor total de desconto concedido
+
+5 - Sair
+
+ 
+
+Regras:
+
+ 
+
+1) Quando o usuário escolhe "Comprar bilhetes":
+
+- o sistema pergunta a zona de destino (1, 2 ou 3);
+
+- pergunta a quantidade de bilhetes desejada.
+
+ 
+
+2) A cada compra, a máquina sorteia aleatoriamente se o cliente é contemplado com 50% de desconto:
+
+- há 20% de chance de o cliente ser contemplado;
+
+- se contemplado, exibir:
+
+ 
+
+Parabéns! Você foi contemplado com 50% de desconto!
+
+ 
+
+3) O valor da compra é calculado com ou sem desconto, e exibido.
+
+ 
+
+4) O sistema deve manter acumuladores:
+
+- total de bilhetes vendidos;
+
+- total de dinheiro arrecadado;
+
+- número de clientes premiados;
+
+- valor total de desconto concedido (quanto a companhia deixou de arrecadar devido aos descontos).
+
+ 
+
+5) O menu se repete até a opção Sair.
+
+ 
+
+Regras de implementação:
+
+ 
+
+- Não utilizar vetores (arrays);
+
+- Não utilizar structs;
+
+- Não utilizar parâmetros por referência (não usar ponteiros);
+
+- Somente funções com passagem de parâmetros por valor e retorno de valor simples;
+
+- O controle de acumuladores deve ser feito na função main_menu().
+
+- O sorteio pode ser feito testando a condição com rand()%100 < 20
