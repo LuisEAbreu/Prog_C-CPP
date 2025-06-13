@@ -12,7 +12,7 @@ float expon(float x, int n){
 		return 1;
 	else if(n>0){
 		for(int i=0;i<n;i++){
-			exp=exp*x;
+			exp=i*exp;
 		}
 		return exp;
 	}
